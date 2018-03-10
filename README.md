@@ -22,6 +22,8 @@ Use cases:
 
 ## Use Instructions
 
+Clone the code to your computer, open 'app.html' with your browser, and you're off!
+
 [TOP](#index)
 
 ---
@@ -65,22 +67,22 @@ EXPORTS: nothing
 BEHAVIOR: defines the controller object
 
 controller: Object
-	PROPERTIES: 2
-		view: Object
-			INITIALIZED: empty
-		model: Object
-			INITIALIZED: empty
-	METHODS: 2
-		addText:
-			ARGS: 1
-				param1: String
-					PURPOSE: to be added to the model
-			RETURN: undefined
-			BEHAVIOR: calls this.model.addText() with 'param1' as argument
-		print:
-			ARGS: 0
-			RETURN: undefined
-			BEHAVIOR: calls this.view.display() with this.model.text
+  PROPERTIES: 2
+    view: Object
+      INITIALIZED: empty
+    model: Object
+      INITIALIZED: empty
+  METHODS: 2
+    addText:
+      ARGS: 1
+        param1: String
+          PURPOSE: to be added to the model
+      RETURN: undefined
+      BEHAVIOR: calls this.model.addText() with 'param1' as argument
+  print:
+      ARGS: 0
+      RETURN: undefined
+      BEHAVIOR: calls this.view.display() with this.model.text
 
 ```
 handler.js
@@ -90,12 +92,12 @@ EXPORTS: nothing
 BEHAVIOR: defines the handler object
 
 handler: Object
-	METHODS: 1
-		setup:
-			ARGS: 0
-			RETURN: undefined
-			BEHAVIOR: Sets the controller's 'view' and 'model' properties.       
-			        Attaches an event listener to the button under the text box.
+  METHODS: 1
+    setup:
+      ARGS: 0
+      RETURN: undefined
+      BEHAVIOR: Sets the controller's 'view' and 'model' properties. 
+      	Attaches an event listener to the button under the text box.
 ```
 model.js
 ```
@@ -104,16 +106,16 @@ EXPORTS: nothing
 BEHAVIOR: defines the model object
 
 model: Object
-	PROPERTIES: 1
-		text: String
-			INITALIZED: empty
-	METHODS: 1
-		addText: 
-			ARGS: 1
-				param1: String
-					PURPOSE: To be set as this.text
-			RETURNS: undefined
-			BEHAVIOR: Resets this.string to the parameter value
+  PROPERTIES: 1
+    text: String
+    INITALIZED: empty
+  METHODS: 1
+    addText: 
+      ARGS: 1
+        param1: String
+        PURPOSE: To be set as this.text
+      RETURNS: undefined
+      BEHAVIOR: Resets this.string to the parameter value
 ```
 view.js
 ```
@@ -122,15 +124,15 @@ EXPORTS: nothing
 BEHAVIOR: defines the view object
 
 view: Object
-	PROPERTIES: 0
-	METHODS: 1
-		display: 
-			ARGS: 1
-				text: String
-					PURPOSE: to be appended into the DOM
-			RETURNS: undefined
-			BEHAVIOR: Takes in a string and concatenates it 
-			        into the innerHTML of the 'printline' div
+  PROPERTIES: 0
+  METHODS: 1
+    display: 
+      ARGS: 1
+        text: String
+        PURPOSE: to be appended into the DOM
+      RETURNS: undefined
+      BEHAVIOR: Takes in a string and concatenates it 
+      		into the innerHTML of the 'printline' div
 ```
 
 
@@ -154,39 +156,38 @@ Eventually you will learn to keep track of this in your mind.  You know you've m
 
 ```
 controller: Object
-	PROPERTIES: 2
-        view: Object
-        	PROPERTIES: 0
-        	METHODS: 1
-        		display: 
-        			ARGS: 1
-        				text: String
-        					PURPOSE: to be appended into the DOM
-        			RETURNS: undefined
-        			BEHAVIOR: Takes in a string and concatenates it 
-        			        into the innerHTML of the 'printline' div
-        model: Object
-        	PROPERTIES: 1
-        		text: String
-        			INITALIZED: empty
-        	METHODS: 1
-        		addText: 
-        			ARGS: 1
-        				param1: String
-        					PURPOSE: To be set as this.text
-        			RETURNS: undefined
-        			BEHAVIOR: Resets this.string to the parameter value
-	METHODS: 2
-		addText:
-			ARGS: 1
-				param1: String
-					PURPOSE: to be added to the model
-			RETURN: undefined
-			BEHAVIOR: calls this.model.addText() with 'param1' as argument
-		print:
-			ARGS: 0
-			RETURN: undefined
-			BEHAVIOR: calls this.view.display() with this.model.text
+  PROPERTIES: 2
+    view: Object
+      PROPERTIES: 0
+      METHODS: 1
+        display: 
+          ARGS: 1
+           text: String
+           PURPOSE: to be appended into the DOM
+        RETURNS: undefined
+        BEHAVIOR: Takes in a string and concatenates it 
+        		into the innerHTML of the 'printline' div
+    model: Object
+      PROPERTIES: 1
+        text: String
+  METHODS: 1
+    addText: 
+      ARGS: 1
+        param1: String
+        PURPOSE: To be set as this.text
+      RETURNS: undefined
+      BEHAVIOR: Resets this.string to the parameter value
+    METHODS: 2
+      addText:
+        ARGS: 1
+          param1: String
+          PURPOSE: to be added to the model
+        RETURN: undefined
+        BEHAVIOR: calls this.model.addText() with 'param1' as argument
+      print:
+        ARGS: 0
+        RETURN: undefined
+        BEHAVIOR: calls this.view.display() with this.model.text
 
 			        
 ```
