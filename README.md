@@ -16,6 +16,7 @@ Use cases:
 * [Sourcecode Specs](#sourcecode-specs)
 * [Build-Time Diagram](#build-time-diagram)
 * [Run-Time Specs](#run-time-specs)
+* [Home](https://github.com/elewa-student/Analyzing-Architecture/tree/master)
 
 ---
 
