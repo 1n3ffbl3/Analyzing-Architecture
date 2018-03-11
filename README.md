@@ -1,28 +1,21 @@
-# MVC_list
+# MVC_list Folder
 
-This is a uselessly simple application, it takes text from a text box and adds it to a list displayed in the DOM.  
+This folder contains only one app.  It only runs in one environment (browser), and each module has has only one version.  
 
-A User can:
-* Add phrases to a comma separated list.
-* Read the words submitted up to now.
+None of the ones you read will be this simple.
 
-Use cases:
-* Writing contracts because you can't delete something once it's written.
-* Learning the MVC architecture.
 
 ### Index
-* [Use Instructions](#use-instructions)
+* [Install Instructions](#install-instructions)
 * [File Structure](#file-structure)
-* [Sourcecode Specs](#sourcecode-specs)
-* [Build-Time Diagram](#build-time-diagram)
-* [Run-Time Specs](#run-time-specs)
+* [Apps](#apps)
 * [Home](https://github.com/elewa-student/Analyzing-Architecture/tree/master)
 
 ---
 
-## Use Instructions
+## Install Instructions
 
-Clone the code to your computer, open 'app.html' with your browser, and you're off!
+Clone the code to your computer.  That's all.  No installing or building necessary.
 
 [TOP](#index)
 
@@ -52,147 +45,15 @@ MVC_list
 
 ---
 
-## Sourcecode Specs
+## Apps
 
-app.html
-```
-REQUIRES: controller.js, handler.js, model.js, view.js
-EXPORTS: nothing
-BEHAVIOR: Calls _handler.setup()_ when the Window loads.  This builds all of the objects together and initializes the app so users can add words to a list.
-```
-controller.js
-```
-REQUIRES: nothing
-EXPORTS: nothing
-BEHAVIOR: defines the controller object
-
-controller: Object
-  PROPERTIES: 2
-    view: Object
-      INITIALIZED: empty
-    model: Object
-      INITIALIZED: empty
-  METHODS: 2
-    addText:
-      ARGS: 1
-        param1: String
-          PURPOSE: to be added to the model
-      RETURN: undefined
-      BEHAVIOR: calls this.model.addText() with 'param1' as argument
-  print:
-      ARGS: 0
-      RETURN: undefined
-      BEHAVIOR: calls this.view.display() with this.model.text
-
-```
-handler.js
-```
-REQUIRES: nothing
-EXPORTS: nothing
-BEHAVIOR: defines the handler object
-
-handler: Object
-  METHODS: 1
-    setup:
-      ARGS: 0
-      RETURN: undefined
-      BEHAVIOR: Sets the controller's 'view' and 'model' properties. 
-      	Attaches an event listener to the button under the text box.
-```
-model.js
-```
-REQUIRES: nothing
-EXPORTS: nothing
-BEHAVIOR: defines the model object
-
-model: Object
-  PROPERTIES: 1
-    text: String
-    INITALIZED: empty
-  METHODS: 1
-    addText: 
-      ARGS: 1
-        param1: String
-        PURPOSE: To be set as this.text
-      RETURNS: undefined
-      BEHAVIOR: Resets this.string to the parameter value
-```
-view.js
-```
-REQUIRES: nothing
-EXPORTS: nothing
-BEHAVIOR: defines the view object
-
-view: Object
-  PROPERTIES: 0
-  METHODS: 1
-    display: 
-      ARGS: 1
-        text: String
-        PURPOSE: to be appended into the DOM
-      RETURNS: undefined
-      BEHAVIOR: Takes in a string and concatenates it 
-      		into the innerHTML of the 'printline' div
-```
+This folder only contains one app.  It's a basic browser app with an HTML file that requires some JS and runs them when the Window loads:
+* [MVC_list](./MVC_list.md)
 
 
 [TOP](#index)
 
----
 
-## Built-Time Diagram
-
-![](./MVC_list-build-time-diagram.png)
-
-[TOP](#index)
-
----
-
-## Run-Time Specs
-
-After initialization and durring runtime, the objects being used to run the application are not the same as in the sourcecode.  You can see this with the "Watch" feature in your browser's debugger.  
-
-Eventually you will learn to keep track of this in your mind.  You know you've made it as a programmer when you can track the _state_ of your application as it runs.
-
-```
-controller: Object
-  PROPERTIES: 2
-    view: Object
-      PROPERTIES: 0
-      METHODS: 1
-        display: 
-          ARGS: 1
-           text: String
-           PURPOSE: to be appended into the DOM
-        RETURNS: undefined
-        BEHAVIOR: Takes in a string and concatenates it 
-        		into the innerHTML of the 'printline' div
-    model: Object
-      PROPERTIES: 1
-        text: String
-  METHODS: 1
-    addText: 
-      ARGS: 1
-        param1: String
-        PURPOSE: To be set as this.text
-      RETURNS: undefined
-      BEHAVIOR: Resets this.string to the parameter value
-    METHODS: 2
-      addText:
-        ARGS: 1
-          param1: String
-          PURPOSE: to be added to the model
-        RETURN: undefined
-        BEHAVIOR: calls this.model.addText() with 'param1' as argument
-      print:
-        ARGS: 0
-        RETURN: undefined
-        BEHAVIOR: calls this.view.display() with this.model.text
-
-			        
-```
-
-[TOP](#index)
 
 ___
 ___
