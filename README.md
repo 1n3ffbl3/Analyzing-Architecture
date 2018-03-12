@@ -1,15 +1,19 @@
-# MVC_list Folder
+# MVC_list Branch
 
-This folder contains only one app.  It only runs in one environment (browser), and each module has has only one version.  
-
-None of the ones you read will be this simple.
-
+This code is a simply organized, basic application.  Though it is made of modular components there is only one application built from this code.
 
 ### Index
+* [Apps](#apps)
 * [Install Instructions](#install-instructions)
 * [File Structure](#file-structure)
-* [Apps](#apps)
 * [Home](https://github.com/elewa-student/Analyzing-Architecture/tree/master)
+
+---
+
+## Apps
+
+This folder only contains one app.  It's a basic browser app with an HTML file that requires some JS and runs them when the Window loads:
+* [MVC_list](./MVC_list.md)
 
 ---
 
@@ -31,7 +35,7 @@ _App.html_ is the entry point.  It requires all of the other files and builds th
 MVC_list
 |
 +-- app.html
-|		* Entry point to the application
+|	* Entry point to the application
 |
 +-- controller.js
 +-- handler.js
@@ -43,12 +47,7 @@ MVC_list
 
 [TOP](#index)
 
----
 
-## Apps
-
-This folder only contains one app.  It's a basic browser app with an HTML file that requires some JS and runs them when the Window loads:
-* [MVC_list](./MVC_list.md)
 
 
 [TOP](#index)

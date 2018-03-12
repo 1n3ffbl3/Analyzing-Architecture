@@ -27,29 +27,6 @@ Clone the code to your computer, open 'app.html' with your browser, and you're o
 
 ---
 
-## File Structure
-
-Nothing remarkable here, just a single folder with all of the files at the top level. 
-
-_App.html_ is the entry point.  It requires all of the other files and builds them together when the Window Object is done loading.
-
-```
-MVC_list
-|
-+-- app.html
-|		* Entry point to the application
-|
-+-- controller.js
-+-- handler.js
-+-- model.js
-+-- README.md
-+-- view.js
-
-```
-
-[TOP](#index)
-
----
 
 ## Sourcecode Specs
 
