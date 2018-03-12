@@ -118,7 +118,7 @@ view: Object
 
 ## Built-Time Diagram
 
-![](./MVC_list-build-time-diagram.png)
+![](./mvc_list-build-time-diagram.png)
 
 [TOP](#index)
 
