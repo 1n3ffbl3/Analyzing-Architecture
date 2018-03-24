@@ -6,6 +6,7 @@ This code is a simply organized, basic application.  Though it is made of modula
 * [Apps](#apps)
 * [Install Instructions](#install-instructions)
 * [File Structure](#file-structure)
+* [Build-Time Diagram](#build-time-diagram)
 * [Home](https://github.com/elewa-student/Analyzing-Architecture/tree/master)
 
 ---
