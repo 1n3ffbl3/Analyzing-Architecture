@@ -47,7 +47,11 @@ MVC_list
 
 [TOP](#index)
 
+___
 
+## Build-Time Diagram
+
+![](./mvc_list-build-time-diagram.png)
 
 
 [TOP](#index)
